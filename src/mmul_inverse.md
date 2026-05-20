@@ -17,63 +17,61 @@ Block Multiplication is another method, non-obvious one; each matrix is split an
 
 - Invertible == Non-Singular
 - Non-Invertible == Singular.
-    - Determinant is 0
-    - `A-1 A = I` does not have a solution.
-    - If we can find `Ax = 0` (and `x != 0`): then, _if_ there were an inverse `A-1 A x = x = 0` then `x = 0` which contradicts the first result.
+    - Determinant is 0,
+    - $A^{-1} A = I$ does not have a solution,
+    - If we can find $Ax = 0$ (and $x \neq 0$): then, _if_ there were an inverse $A^{-1} A x = x = 0$ then $x = 0$ which contradicts the first result.
 
-Look at this is using the column picture: a column of A initially and a column of `I`.
+Look at this is using the column picture: a column of A initially and a column of $I$.
 
 $$
-\begin{matrix}
+\begin{bmatrix}
 2 & 3\\
 4 & 6
-\end{matrix}
+\end{bmatrix}
 
-\begin{matrix}
-a1 & a2\\
-a3 & a4
-\end{matrix}
+\begin{bmatrix}
+a_1 & a_2\\
+a_3 & a_4
+\end{bmatrix}
 
  =
-\begin{matrix}
+\begin{bmatrix}
 1 & 0\\
 0 & 1
-\end{matrix}
+\end{bmatrix}
 $$
 
 We can think of two systems of equations, looking at columns in the RHS. For example:
 
 $$
-\begin{matrix}
+\begin{bmatrix}
 2 & 3\\
 4 & 6
-\end{matrix}
+\end{bmatrix}
 
-\begin{matrix}
+\begin{bmatrix}
 a1\\
 a3
-\end{matrix}
+\end{bmatrix}
 
  =
-\begin{matrix}
+\begin{bmatrix}
 1 \\
 0
-\end{matrix}
+\end{bmatrix}
 $$
 
-With the columns being multiples of each other, there isn't a solution. Only a case where one column is `k*[1,0]` and another is `[0,0]` would work. But this case won't solve the second one!
+With the columns being multiples of each other, there isn't a solution. Only a case where one column is $k\times [1,0]$ and another is $[0,0]$ would work. But this case won't solve the second one!
 
 > [!TIP]
-> So `AX=B` is a set of `Ax = b` problems, but instead of solving them separately, they can be solved together / at once, thanks to Gauss-Jordan.
+> So $AX=B$ is a set of $Ax = b$ problems, but instead of solving them separately, they can be solved together / at once, thanks to Gauss-Jordan.
 
 One way to solve all at once is augmenting it with the identity:
 
 $$
 \begin{matrix}
-1 & 3\\
-2 & 7 \\
-1 & 0\\
-0 & 1
+1 & 3 & 1 & 0\\
+2 & 7 & 0 & 1
 \end{matrix}
 $$
 
@@ -81,28 +79,26 @@ And perform elimination, until we get:
 
 $$
 \begin{matrix}
-1 & 0\\
-0 & 1 \\
-7 & -3\\
--2 & 1
+1 & 0 & 7 & -3\\
+0 & 1 & -2 & 1
 \end{matrix}
 $$
 
 Now
 
 $$
-\begin{matrix}
+\begin{bmatrix}
 1 & 3\\
 2 & 7 \\
-\end{matrix}
-\begin{matrix}
+\end{bmatrix}
+\begin{bmatrix}
 7 & -3\\
 -2 & 1
-\end{matrix}
+\end{bmatrix}
 $$
 
 Is the identity.
 
 ### Why does it work?
 
-We solved $A X = I$, doing $E A X = E$`. Since we got to $EA = $, then $E=A-1$.
+We solved $A X = I$, doing $E A X = E$ Since we got to $EA = $, then $E=A-1$.
