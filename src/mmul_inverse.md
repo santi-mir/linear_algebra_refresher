@@ -64,4 +64,45 @@ $$
 With the columns being multiples of each other, there isn't a solution. Only a case where one column is `k*[1,0]` and another is `[0,0]` would work. But this case won't solve the second one!
 
 > [!TIP]
-> So `AX=B` is a set of `Ax = b` problems, but they can be solved together.
+> So `AX=B` is a set of `Ax = b` problems, but instead of solving them separately, they can be solved together / at once, thanks to Gauss-Jordan.
+
+One way to solve all at once is augmenting it with the identity:
+
+$$
+\begin{matrix}
+1 & 3\\
+2 & 7 \\
+1 & 0\\
+0 & 1
+\end{matrix}
+$$
+
+And perform elimination, until we get:
+
+$$
+\begin{matrix}
+1 & 0\\
+0 & 1 \\
+7 & -3\\
+-2 & 1
+\end{matrix}
+$$
+
+Now
+
+$$
+\begin{matrix}
+1 & 3\\
+2 & 7 \\
+\end{matrix}
+\begin{matrix}
+7 & -3\\
+-2 & 1
+\end{matrix}
+$$
+
+Is the identity.
+
+### Why does it work?
+
+We solved $A X = I$, doing $E A X = E$`. Since we got to $EA = $, then $E=A-1$.
