@@ -1,0 +1,12 @@
+[book]
+title = "linear algebra basics"
+authors = ["no_one"]
+language = "en"
+
+[output.html]
+default-theme = "rust"
+preferred-dark-theme = "ayu"
+
+
+[preprocessor.katex]
+after = ["links"]
