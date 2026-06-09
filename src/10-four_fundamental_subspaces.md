@@ -1,11 +1,11 @@
 # Four Fundamental Subspaces
 
-For $[A] = m\times{}n$:
+For $[A] = m\times{}n$, we can summarise aspects of subspaces in a table:
 
-| rank $\rightarrow$ <br/> dimension $\downarrow$ | $r$ | $n-r$ | $m-r$ |
-|--------------------------------------------|-----|-------|-------|
-|$R^m$ | $C(A)$            |-|$N(A^T)$|
-|$R^n$ | $C(A^T)$,<br/> $R(A)$|$N(A)$|-|
+| Rank $\rightarrow$ <br/> Dimension $\downarrow$ | $r$ | $n-r$ | $m-r$ |
+|-------------------------------------------------|-----|-------|-------|
+|$R^m$ | $C(A)$            |&mdash;|N(A^T)$|
+|$R^n$ | $C(A^T)$,<br/>$R(A)$|$N(A)$|&mdash;|
 
 The spaces in the same row (same dimensions) add their ranks up to the dimensionality.
 
@@ -35,7 +35,29 @@ If we have $r$ independent columns, then we have $r$ independent rows (and the c
 
 ## Matrix Spaces
 
-We can also linearly combine matrices $$\sum_i c_i A_i$$
+We can also linearly combine matrices $$B = \sum_i c_i A_i$$
 
 Subspaces are symmetric matrices, upper triangular, diagonal. They also have different dimensions (given by certain basis).
+
+Here is a _basis_ for _diagonal_ $3\times{}3$ _matrices_
+
+$$
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 0 & 0 \\
+0 & 0 & 0 \\
+\end{bmatrix},
+
+\begin{bmatrix}
+0 & 1 & 0 \\
+0 & 2 & 0 \\
+0 & 0 & 0 \\
+\end{bmatrix},
+
+\begin{bmatrix}
+0 & 0 & 0 \\
+0 & 0 & 0 \\
+0 & 0 & 7 \\
+\end{bmatrix}
+$$
 
