@@ -4,8 +4,9 @@ For $[A] = m\times{}n$, we can summarise aspects of subspaces in a table:
 
 | Rank $\rightarrow$ <br/> Dimension $\downarrow$ | $r$ | $n-r$ | $m-r$ |
 |-------------------------------------------------|-----|-------|-------|
-|$R^m$ | $C(A)$            |&mdash;|N(A^T)$|
-|$R^n$ | $C(A^T)$,<br/>$R(A)$|$N(A)$|&mdash;|
+|$R^m$ | $C(A)$               | &mdash;| $N(A^T)$ |
+|$R^n$ | $C(A^T)$,<br/>$R(A)$ | $N(A)$ | &mdash;  |
+
 
 The spaces in the same row (same dimensions) add their ranks up to the dimensionality.
 
