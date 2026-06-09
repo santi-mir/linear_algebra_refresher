@@ -6,7 +6,16 @@ language = "en"
 [output.html]
 default-theme = "rust"
 preferred-dark-theme = "ayu"
+no-section-label = true # remove numbers in navbar.
+# additional-js = ["./mermaid.min.js", "./mermaid-init.js"]
 
+[build]
+build-dir ="docs"
+create-missing = false
 
 [preprocessor.katex]
 after = ["links"]
+
+# [preprocessor.quiz]
+# [preprocessor.mermaid]
+# command = "mdbook-mermaid"
