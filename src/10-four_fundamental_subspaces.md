@@ -32,3 +32,10 @@ The dimension of the column space of $A$ is the rank: $dim(C(A)) = r$. The basis
 The rank of $A^T$ (rank of the row space) is the same as the rank of the column space. The basis rows are the pivot rows. Rank is the number of them.
 
 If we have $r$ independent columns, then we have $r$ independent rows (and the converse). Similarly, we have $n-r$ for the dimension of $N(A)$ and of $N(A^T)$.
+
+## Matrix Spaces
+
+We can also linearly combine matrices $$\sum_i c_i A_i$$
+
+Subspaces are symmetric matrices, upper triangular, diagonal. They also have different dimensions (given by certain basis).
+

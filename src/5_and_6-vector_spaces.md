@@ -7,6 +7,8 @@ A vector space is a set of vectors that:
 - **Form a closed space**: The linear combinations must stay in the space.
   - For example, $N^N$ does not form a space if integers are allowed as coefficients $a$ (it can take us to negatives.)
 
+We can think of the full space as all the possible combinations of values of the components of the vector; for a vector with 3 components is 3D space.
+
 ## Subspaces
 Subspaces are _spaces within a larger space_; the 4 properties above are required.
 
