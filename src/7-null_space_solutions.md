@@ -12,6 +12,7 @@ The null space of a matrix is the linear combination of columns that solve $A\ma
 - The _LC of columns_ $A\mathbf{x}$ forms a space, called the column space of $A$, denoted $C(A)$. This is not directly related to any equation,
 - The _solutions_ for $A\mathbf{x} = \mathbf{b}$ don't form a space: they don't contain the $\mathbf{x}$ (unless $\mathbf{b}=\mathbf{0}$),
 - The _solutions_ of $A\mathbf{x} = \mathbf{0}$ do form a space, called the null space of $A$. **This is what we explore here.**
+- Notice also that each row of $A$ must be orthogonal to $\mathbf{x}$, since the dot product is zero.
 
 ## Uses of N(A)
 
