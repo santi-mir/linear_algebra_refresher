@@ -1,6 +1,9 @@
 # Four Fundamental Subspaces
 
-For $[A] = m\times{}n$, we can summarise aspects of subspaces in a table:
+$C(A)$ and $N(A)$ are two subspaces associated with $A^{m\times{}n}$.
+We can extend these results for extra subspaces: $C(A^T)$ and $N(A^T)$. 
+
+The results are summarised below:
 
 | Rank $\rightarrow$ <br/> Dimension $\downarrow$ | $r$ | $n-r$ | $m-r$ |
 |-------------------------------------------------|-----|-------|-------|
@@ -8,16 +11,14 @@ For $[A] = m\times{}n$, we can summarise aspects of subspaces in a table:
 |$R^n$ | $C(A^T)$,<br/>$R(A)$ | $N(A)$ | &mdash;  |
 
 
-The spaces in the same row (same dimensions) add their ranks up to the dimensionality.
+A few facts stand out:
 
-$C(A)$ and $C(A^T)$ have the same _rank_: _we have as many independent rows as we have columns_.
+- Each row ranks add up to the dimensionality ($m$ or $n$),
+- $C(A)$ and $C(A^T)$ have the same _rank_: _we have as many independent rows as we have columns_,
+- The reduced matrix $R$ has same row space than $A$ but different column space: $C(R^T)=C(A^T)$ and $C(R) \neq C(A)$.
 
-The reduced matrix $R$ has same row space than $A$ but different column space: $C(R^T)=C(A^T)$ and $C(R) \neq C(A)$.
 
-
-For $N(A)$ we solve $A\mathbf{x} = \mathbf{0}$ (LC of columns giving zero-column). For $N(A^T)$ we solve $A^T\mathbf{x} = \mathbf{0}$ which we can transpose to $\mathbf{x}^TA=\mathbf{0}^T$.
-
-Sadly, the solutions don't have an obvious connection.
+For $N(A)$ we solve $A\mathbf{x} = \mathbf{0}$ (LC of columns giving zero-column). For $N(A^T)$ we solve $A^T\mathbf{x} = \mathbf{0}$ which we can transpose to $\mathbf{x}^TA=\mathbf{0}^T$. Sadly, the solutions don't have an obvious connection.
 
 > [!IMPORTANT]
 > $N(A)$ comes straight from $R$, but $N(A^T)$ from the elimination matrix $E$, in the same row that made that row all zeros!
